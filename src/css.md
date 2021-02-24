@@ -205,14 +205,28 @@ div {
 
 ---
 
-## 参考教材
-
-[しまぶーの IT 大学 CSS 基礎編 - Youtube再生リスト](https://www.youtube.com/playlist?list=PLwM1-TnN_NN5jWN09yjtxWng2XZa88ate)
-
----
-
 ## CSS ライブラリ
 
 ### Bootstrap
 
 [公式ドキュメント](https://getbootstrap.jp/docs/5.0/getting-started/introduction/)
+
+---
+
+## Reset CSS
+
+ブラウザに付属しているデフォルトのスタイルを打ち消す（リセットする）CSS のこと．
+
+ブラウザによるスタイルの差異をなくすことを目的としている．
+
+### 参考
+
+[2021 年、モダンブラウザに適した CSS リセットのまとめ - コリス](https://coliss.com/articles/build-websites/operation/css/css-reset-for-modern-browser.html)
+
+[CSS リセットの種類、どの CSS リセットが適しているかの選び方 | コリス ](https://coliss.com/articles/build-websites/operation/css/a-look-at-css-resets.html)
+
+---
+
+## 参考教材
+
+[しまぶーの IT 大学 CSS 基礎編 - Youtube 再生リスト](https://www.youtube.com/playlist?list=PLwM1-TnN_NN5jWN09yjtxWng2XZa88ate)
