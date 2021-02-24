@@ -159,6 +159,15 @@ JavaScript から HTML へアクセスする窓口．HTML 要素の値の取得�
 document.getElementByID("id名");
 ```
 
+### CSS セレクタで指定
+
+イマドキの書き方
+
+```
+document.querySelector("CSSセレクタ");
+document.querySelectorAll("CSSセレクタ");
+```
+
 ### class で指定
 
 ```
@@ -182,6 +191,16 @@ const x = document.forms.hoge;
 const y = x.title.value;
 ```
 
+> > これらは以下の理由であんまよくない。
+> > querySelector とか使ってね．
+> >
+> > - DOM 要素を取得してることがわかりにくい．
+> > - TypeScript での型推論がうまくいかない．
+
+### 参考教材
+
+[要素の取得方法まとめ - Qiita](https://qiita.com/amamamaou/items/25e8b4e1b41c8d3211f4)
+
 ---
 
 ## DOM 要素の書き換え
@@ -198,6 +217,9 @@ element.innerText = "書き換えました";
 ### innerHTML
 
 DOM 要素内の**HTML**を取得，設定できる
+
+> > innerHTML するときは XSS に気をつけよう！
+> > HTML エスケープしてね
 
 ```
 // HTMLでの記述
@@ -312,7 +334,9 @@ const promiseFunc = () => {
 
 ### async/await で完了を待つ方法
 
-Promise より async/await がオススメ
+async/await をつかうとより簡潔に記述できる．
+
+> > ただし，Promise.all() とか、コールバック関数を受け取る非同期 API を Promisify（Promise 化）するときはどうしても Promise オブジェクトを使う必要がある
 
 - 記述が簡潔になる
 - 直感的でわかりやすい
@@ -529,6 +553,7 @@ console.log(result);
 ## コーディング規約
 
 チームの方針に従う．
+ESLint などの静的検証ツールで管理するとよい．
 
 ### なぜコーディング規約が必要か
 
@@ -578,6 +603,18 @@ console.log(result);
 - スペース 4 つが推奨
 - スペース 2 つの環境もある
 - タブインデントは非推奨
+
+---
+
+## Strict モード
+
+Strict モードを使うとより安全なコードが書ける．
+
+スクリプトや関数の先頭で文字列 `'use strict';` を追加することで有効になる.
+
+[Strict モード - MDN リファレンス](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Strict_mode)
+
+[(初心者向け) JavaScript の Strict モードの概要 - Qiita ](https://qiita.com/tadnakam/items/700bd526b33f8f92702a)
 
 ---
 
